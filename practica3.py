@@ -10,7 +10,8 @@ while True:
     print("===MENU====")
     print("1. Ver ficha de contacto")
     print("2. Editar ficha de contacto")
-    print("3. Salir")
+    print("3. Ver promedio de notas")
+    print("4. Salir")
     opcion = int(input("Ingrese una opcion:"))
     if opcion == 1:
         print("Ficha de contacto:")
@@ -27,6 +28,15 @@ while True:
         else:
             print("Campo no encontrado.")
     elif opcion == 3:
+        Notas = []
+        for i in range(5):
+            nota = float(input(f"Ingrese la nota {i+1}: "))
+            Notas.append(nota)
+        suma = sum(Notas)
+        print("Suma de las notas:", suma)
+        promedio = suma / len(Notas)
+        print("Promedio de las notas:", promedio)
+    elif opcion == 4:
         print("Saliendo del programa...")
         break
     else:
